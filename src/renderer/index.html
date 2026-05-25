@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber-Sanity Auditor v1.0</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="card" id="card">
+      <div class="tape" aria-hidden="true"></div>
+      <div class="decor decor-a" aria-hidden="true"></div>
+      <div class="decor decor-b" aria-hidden="true"></div>
+
+      <header class="drag-region" id="dragRegion">
+        <div class="header-row">
+          <div class="header-text">
+            <h1 class="title" id="title">Cyber-Sanity Auditor v1.0</h1>
+            <p class="subtitle" id="subtitle">今日份的人类多样性观察日志</p>
+          </div>
+          <div class="mascot" id="mascot" aria-hidden="true">
+            <svg class="mascot-svg" viewBox="0 0 40 40" fill="none">
+              <ellipse class="mascot-body" cx="20" cy="22" rx="15" ry="13" />
+              <g class="face face-calm">
+                <path d="M13 19 Q15 17 17 19" stroke-width="1.6" stroke-linecap="round" fill="none" />
+                <path d="M23 19 Q25 17 27 19" stroke-width="1.6" stroke-linecap="round" fill="none" />
+                <path d="M16 26 Q20 29 24 26" stroke-width="1.5" stroke-linecap="round" fill="none" />
+              </g>
+              <g class="face face-hint">
+                <circle cx="15" cy="19" r="1.4" />
+                <path d="M23 19 Q25 17 27 19" stroke-width="1.6" stroke-linecap="round" fill="none" />
+                <path d="M17 26 Q20 28 23 26" stroke-width="1.5" stroke-linecap="round" fill="none" />
+              </g>
+              <g class="face face-busy">
+                <circle cx="15" cy="19" r="1.5" />
+                <circle cx="25" cy="19" r="1.5" />
+                <ellipse cx="20" cy="26.5" rx="2.2" ry="1.6" />
+              </g>
+              <g class="face face-tired">
+                <circle cx="15" cy="19" r="1.5" />
+                <circle cx="25" cy="19" r="1.5" />
+                <path d="M16 27 Q20 25 24 27" stroke-width="1.5" stroke-linecap="round" fill="none" />
+                <circle class="mascot-blush" cx="11" cy="23" r="2.2" opacity="0.35" />
+                <circle class="mascot-blush" cx="29" cy="23" r="2.2" opacity="0.35" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </header>
+
+      <main class="tap-region" id="tapRegion" role="button" tabindex="0" aria-label="忍了">
+        <div class="count-ring" id="countRing">
+          <div class="truth-marquee" id="truthMarquee" aria-hidden="true">
+            <span class="truth-marquee-text" id="truthMarqueeText"></span>
+          </div>
+          <span class="click-bubble" id="clickBubble" aria-live="polite"></span>
+          <span class="count" id="count">0</span>
+        </div>
+        <p class="status-tier" id="statusTier">佛系生命体</p>
+        <p class="status-vibe" id="statusVibe">暂无傻逼入侵，世界保持虚假的和平。</p>
+        <span class="tap-hint" id="tapHint">忍了 (Endure)</span>
+        <span class="ripple" id="ripple" aria-hidden="true"></span>
+      </main>
+
+      <footer class="footer">
+        <button type="button" class="reset-btn" id="resetBtn" title="记忆抹除">
+          记忆抹除 (Lobotomy)
+        </button>
+      </footer>
+    </div>
+
+    <div class="toast hidden" id="toast" role="status"></div>
+
+    <div class="modal-overlay hidden" id="resetModal" aria-hidden="true">
+      <div class="modal">
+        <p class="modal-text" id="resetConfirmText"></p>
+        <p class="modal-sub" id="resetConfirmSub"></p>
+        <div class="modal-actions">
+          <button type="button" class="modal-btn modal-cancel" id="resetCancel">再忍忍</button>
+          <button type="button" class="modal-btn modal-confirm" id="resetConfirm">确定原谅</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="boss-overlay hidden" id="bossOverlay" aria-hidden="true">
+      <div class="boss-panel">
+        <p class="boss-title">正在下载重要系统更新</p>
+        <div class="boss-bar">
+          <div class="boss-progress"></div>
+        </div>
+        <p class="boss-percent">2%</p>
+        <p class="boss-hint">右键或点击任意处退出伪装</p>
+      </div>
+    </div>
+
+    <script src="copy.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

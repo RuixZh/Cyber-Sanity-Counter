@@ -1,0 +1,53 @@
+{
+  "name": "count-desktop",
+  "version": "1.0.0",
+  "description": "Cyber-Sanity Auditor — macOS 桌面计次器",
+  "main": "src/main/index.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "pack": "electron-builder --mac --dir",
+    "dist": "electron-builder --mac",
+    "dist:arm64": "electron-builder --mac --arm64",
+    "dist:x64": "electron-builder --mac --x64"
+  },
+  "author": "",
+  "license": "MIT",
+  "build": {
+    "appId": "com.cyber-sanity.auditor",
+    "productName": "Cyber-Sanity Auditor",
+    "asar": true,
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "darkModeSupport": true,
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false
+    },
+    "dmg": {
+      "title": "Cyber-Sanity Auditor",
+      "window": {
+        "width": 400,
+        "height": 300
+      }
+    }
+  },
+  "devDependencies": {
+    "electron": "^35.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "electron-store": "^8.2.0"
+  }
+}
