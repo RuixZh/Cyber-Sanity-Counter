@@ -1,4 +1,4 @@
-# Cyber-Sanity Auditor v1.0
+# Cyber-Sanity Counter v1.0
 
 macOS 桌面悬浮计次器 — 赛博理智审计员（Electron）。
 
